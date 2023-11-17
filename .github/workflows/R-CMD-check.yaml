@@ -44,6 +44,15 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
+      - name: Install remotes
+        run: |
+          Rscript -e "install.packages('remotes')"
+
+      - name: Install covid
+        run: |
+          Rscript -e "remotes::install_git('https://github.com/berthetclement/covid')"
+
+
       - uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
