@@ -20,7 +20,7 @@ attachment::att_amend_desc()
 
 ## Add dependancies ----
 usethis::use_package("shinythemes")
-usethis::use_dev_package(package = "covid", remote = "berthetclement")
+usethis::use_dev_package(package = "covid", remote = "berthetclement/covid")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
