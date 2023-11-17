@@ -3,15 +3,28 @@
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
 #' @import shiny
+#' @importFrom shinythemes shinytheme
 #' @noRd
 app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    fluidPage(
-      h1("testGolem")
+
+    navbarPage("My App",
+               theme = shinytheme("flatly"),
+               collapsible = TRUE,
+               id="nav",
+
+               tabPanel("Plot"),
+               navbarMenu("More",
+                          tabPanel("Summary"),
+                          "----",
+                          "Section header",
+                          tabPanel("Table")
+               )
     )
+
   )
 }
 
