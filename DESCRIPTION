@@ -8,6 +8,7 @@ Imports:
     config (>= 0.3.2),
     covid (>= 0.1.0),
     golem (>= 0.4.1),
+    pkgload,
     shiny (>= 1.7.3),
     shinythemes
 Encoding: UTF-8

@@ -16,7 +16,7 @@
 ## Run checks ----
 ## Check the package before sending to prod
 devtools::check()
-rhub::check_for_cran()
+# rhub::check_for_cran() # deprecated
 
 # Deploy
 
@@ -27,7 +27,8 @@ devtools::build()
 
 ## RStudio ----
 ## If you want to deploy on RStudio related platforms
-golem::add_rstudioconnect_file()
+  # golem::add_rstudioconnect_file() # deprecated
+golem::add_positconnect_file()
 golem::add_shinyappsio_file()
 golem::add_shinyserver_file()
 
@@ -48,7 +49,7 @@ rsconnect::deployApp(
     # Add any additional files unique to your app here.
     "R/",
     "inst/",
-    "data/",
+    "data-raw/",
     "NAMESPACE",
     "DESCRIPTION",
     "app.R"
