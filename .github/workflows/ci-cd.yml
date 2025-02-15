@@ -67,7 +67,7 @@ jobs:
         # Continuous deployment only for pushes to the main / master branch
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
         env:
-          SHINYAPPS_ACCOUNT: ${{ secrets.SHINYAPPS_ACCOUNT }}
-          SHINYAPPS_TOKEN: ${{ secrets.SHINYAPPS_TOKEN }}
-          SHINYAPPS_SECRET: ${{ secrets.SHINYAPPS_SECRET }}
+          RSCONNECT_USER: ${{ secrets.RSCONNECT_USER }}
+          RSCONNECT_TOKEN: ${{ secrets.RSCONNECT_TOKEN }}
+          RSCONNECT_SECRET: ${{ secrets.RSCONNECT_SECRET }}
         run: Rscript dev/deploy_cicd.R
