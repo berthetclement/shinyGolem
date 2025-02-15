@@ -6,10 +6,10 @@ name: CI-CD
 # Create status badge with usethis::use_github_actions_badge("ci-cd.yml")
 
 on:
-  # Triggered on push and pull request events
   push:
+    branches: [main, master]
   pull_request:
-  # Allow manual runs from the Actions tab
+    branches: [main, master]
   workflow_dispatch:
   # Monthly runs on the 1st day of the month at midnight
   # (specific for ShinyCICD maintenance)
