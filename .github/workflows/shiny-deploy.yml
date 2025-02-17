@@ -2,8 +2,8 @@
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 
 # Name of the workflow
-name: CI-CD
-# Create status badge with usethis::use_github_actions_badge("ci-cd.yml")
+name: shiny-deploy
+# Create status badge with usethis::use_github_actions_badge("shiny-deploy.yml")
 
 on:
   push:
@@ -22,7 +22,7 @@ concurrency:
   group: shinyapps-${{ github.ref }}
 
 jobs:
-  CI-CD:
+  shiny-deploy:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})

@@ -10,6 +10,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/berthetclement/shiny_golem/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/berthetclement/shiny_golem/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/berthetclement/shiny_golem/graph/badge.svg)](https://app.codecov.io/gh/berthetclement/shiny_golem)
+[![shiny-deploy](https://github.com/berthetclement/shiny_golem/actions/workflows/shiny-deploy.yml/badge.svg)](https://github.com/berthetclement/shiny_golem/actions/workflows/shiny-deploy.yml)
 <!-- badges: end -->
 
 The goal of {testGolem} is to test workflow development with github
