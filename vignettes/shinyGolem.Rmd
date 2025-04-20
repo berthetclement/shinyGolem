@@ -1,8 +1,8 @@
 ---
-title: "testGolem"
+title: "shinyGolem"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{testGolem}
+  %\VignetteIndexEntry{shinyGolem}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -15,5 +15,5 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(testGolem)
+library(shinyGolem)
 ```
