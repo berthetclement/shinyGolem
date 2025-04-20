@@ -13,26 +13,26 @@ knitr::opts_chunk$set(
 )
 ```
 
-# testGolem
+# shinyGolem
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/berthetclement/shiny_golem/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/berthetclement/shiny_golem/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/berthetclement/shiny_golem/graph/badge.svg)](https://app.codecov.io/gh/berthetclement/shiny_golem)
-[![shiny-deploy](https://github.com/berthetclement/shiny_golem/actions/workflows/shiny-deploy.yml/badge.svg)](https://github.com/berthetclement/shiny_golem/actions/workflows/shiny-deploy.yml)
+[![R-CMD-check](https://github.com/berthetclement/shinyGolem/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/berthetclement/shinyGolem/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/berthetclement/shinyGolem/graph/badge.svg)](https://app.codecov.io/gh/berthetclement/shinyGolem)
+[![shiny-deploy](https://github.com/berthetclement/shinyGolem/actions/workflows/shiny-deploy.yml/badge.svg)](https://github.com/berthetclement/shinyGolem/actions/workflows/shiny-deploy.yml)
 <!-- badges: end -->
 
-The goal of {testGolem} is to test workflow development with github actions.
+The goal of {shinyGolem} is to test workflow development with github actions.
 
 ## Installation
 
-You can install the development version of testGolem from [GitHub](https://github.com/) with:
+You can install the development version of shinyGolem from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("berthetclement/shiny_golem")
+devtools::install_github("berthetclement/shinyGolem")
 ```
 
 ## Deployment
 
-Currently, application is deployed on Posit server. You can access it [here](https://devappcbe.shinyapps.io/testGolem/)
+Currently, application is deployed on Posit server. You can access it [here](https://devappcbe.shinyapps.io/shinyGolem/)

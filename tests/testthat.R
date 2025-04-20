@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/reference/test_package.html#special-files
 
 library(testthat)
-library(testGolem)
+library(shinyGolem)
 
-test_check("testGolem")
+test_check("shinyGolem")

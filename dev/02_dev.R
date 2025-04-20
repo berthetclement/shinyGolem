@@ -50,7 +50,7 @@ usethis::use_test("app")
 # Documentation
 
 ## Vignette ----
-usethis::use_vignette("testGolem")
+usethis::use_vignette("shinyGolem")
 devtools::build_vignettes()
 
 ## Code Coverage----

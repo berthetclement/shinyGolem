@@ -16,7 +16,7 @@ app_ui <- function(request) {
                collapsible = TRUE,
                id="nav",
 
-               tabPanel("Plot"),
+               tabPanel("Data VIZ DEMO", mod_data_viz_demo_ui("data_viz_demo_1")),
                navbarMenu("More",
                           tabPanel("Summary"),
                           "----",
@@ -46,7 +46,7 @@ golem_add_external_resources <- function() {
     favicon(),
     bundle_resources(
       path = app_sys("app/www"),
-      app_title = "testGolem"
+      app_title = "shinyGolem"
     )
     # Add here other external resources
     # for example, you can add shinyalert::useShinyalert()
