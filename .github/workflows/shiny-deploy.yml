@@ -32,7 +32,7 @@ jobs:
       # single OS and R version, aligned with the target deployment environment
       matrix:
         config:
-          - {os: ubuntu-latest, r: 'release'}
+          - {os: ubuntu-latest, r: '4.4.2'}
 
     env:
       # Access token for GitHub
