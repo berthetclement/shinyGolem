@@ -15,6 +15,7 @@ Initialize the package with {golem} steps
   
 ## NEW FEATUES
 
+* New tab added for data viz in demo mode
 
 ## Package updates (use internal file `dev/01_start.R`)
 
@@ -23,4 +24,6 @@ Initialize the package with {golem} steps
 * Package name updated to be similar to github repos ("shinyGolem")
 * Add new module *ui/serer* is file `mod_data_viz_demo.R` + test file
 * Add 'rsconnect' to gitignore
+* Add new `favico`
+* Update config.yml with spinner type
 
