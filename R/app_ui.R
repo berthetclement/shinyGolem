@@ -9,14 +9,18 @@ app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
-    # Your application UI logic
 
+    # enable busy indicators
+    useBusyIndicators(),
+    # Your application UI logic
     navbarPage("My App",
                theme = shinytheme("flatly"),
                collapsible = TRUE,
                id="nav",
 
-               tabPanel("Data VIZ DEMO", mod_data_viz_demo_ui("data_viz_demo_1")),
+               tabPanel("Data VIZ DEMO",
+                        mod_data_viz_demo_ui("data_viz_demo_1")),
+
                navbarMenu("More",
                           tabPanel("Summary"),
                           "----",
