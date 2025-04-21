@@ -26,4 +26,5 @@ Initialize the package with {golem} steps
 * Add 'rsconnect' to gitignore
 * Add new `favico`
 * Update config.yml with spinner type
+* Add dependencies {GGally} + {ggplot2} 
 

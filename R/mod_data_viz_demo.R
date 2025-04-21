@@ -1,3 +1,8 @@
+# globals
+utils::globalVariables(c("Species", "Sepal.Length", "Sepal.Width",
+                         "Petal.Length", "Petal.Width", "iris"))
+
+
 #' data_viz_demo UI Function
 #'
 #' @description A shiny Module.
@@ -6,7 +11,7 @@
 #'
 #' @noRd
 #'
-#' @importFrom shiny NS tagList
+#' @importFrom shiny NS tagList busyIndicatorOptions titlePanel sidebarLayout sidebarPanel
 mod_data_viz_demo_ui <- function(id) {
   ns <- NS(id)
   tagList(
@@ -44,6 +49,9 @@ mod_data_viz_demo_ui <- function(id) {
 #' data_viz_demo Server Functions
 #'
 #' @noRd
+#' @importFrom shiny moduleServer renderPrint renderPlot reactive
+#' @importFrom GGally ggpairs wrap
+#' @importFrom ggplot2 aes
 mod_data_viz_demo_server <- function(id){
   moduleServer(id, function(input, output, session){
     ns <- session$ns
