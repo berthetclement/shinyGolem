@@ -7,6 +7,7 @@ Description: The goal is to try {golem} and have a robust Shiny application, wit
 License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.2),
+    GGally,
     golem (>= 0.4.1),
     pkgload,
     shiny (>= 1.7.3),
