@@ -2,6 +2,7 @@ default:
   golem_name: shinyGolem
   golem_version: 0.0.0.9000
   app_prod: no
+  spinner_type_app: pulse3
 production:
   app_prod: yes
 dev:
