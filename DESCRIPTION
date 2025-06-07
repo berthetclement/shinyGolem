@@ -10,7 +10,6 @@ Imports:
     GGally,
     ggplot2,
     golem (>= 0.4.1),
-    pkgload,
     shiny (>= 1.7.3),
     shinythemes
 Encoding: UTF-8
@@ -21,7 +20,8 @@ Suggests:
     rmarkdown,
     rsconnect,
     spelling,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    pkgload
 Config/testthat/edition: 3
 Language: en-US
 VignetteBuilder: knitr
