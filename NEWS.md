@@ -1,5 +1,9 @@
-# shinyGolem 0.0.0.9000
+# shinyGolem 1.0.0
 
+* Update content and delete dependencies {GGally}
+* Add Shinytest2 and add tests (`record_test()` method)
+
+# shinyGolem 0.0.0.9000
 
 Initialize the package with {golem} steps  
 
