@@ -33,9 +33,9 @@ mod_data_viz_demo_ui <- function(id) {
   # Show a plot of the generated distribution
   mainPanel(
     tabsetPanel(
-     tabPanel("Descriptive statistics",
-               h3("Scatterplot 'global'"), plotOutput(ns("Scatterplot")),
-               h3("Descriptive statistics (by 'Species')"),verbatimTextOutput(ns("Summary"))),
+     tabPanel("Plots",
+               h3("Smooth curve"), plotOutput(ns("curve")),
+               h3("Sample data (by 'Species')"),verbatimTextOutput(ns("sample_data"))),
       tabPanel("Plot",
                h3("Boxplot"), plotOutput(ns("boxPlot"))),
       tabPanel("Table",
@@ -50,8 +50,9 @@ mod_data_viz_demo_ui <- function(id) {
 #'
 #' @noRd
 #' @importFrom shiny moduleServer renderPrint renderPlot reactive
-#' @importFrom GGally ggpairs wrap
-#' @importFrom ggplot2 aes
+#' @importFrom ggplot2 ggplot aes geom_point geom_smooth facet_wrap theme_minimal
+#' @importFrom ggplot2 ggtitle theme element_text
+#' @importFrom utils head
 mod_data_viz_demo_server <- function(id){
   moduleServer(id, function(input, output, session){
     ns <- session$ns
@@ -91,18 +92,23 @@ mod_data_viz_demo_server <- function(id){
     ##
 
     # Generate a summary of the dataset (or subset by Iris.Species)
-    output$Summary <- renderPrint({
+    output$sample_data <- renderPrint({
       dataset <- datasetInput()
-      summary(dataset)
+      head(dataset)
     })
 
     # ggpairs + correlation
-    output$Scatterplot <- renderPlot({
-
-      ggpairs(iris,
-              columns = 1:4,
-              aes(color = Species, alpha = 0.5),
-              upper = list(continuous = wrap("cor", size = 2.7)))
+    output$curve <- renderPlot({
+      ggplot(data=datasetInput(),
+             aes(x=Sepal.Width,
+                 y=Sepal.Length,
+                 color=Species)) +
+        geom_point() +
+        geom_smooth(se=FALSE) +
+        facet_wrap(~Species) +
+        theme_minimal()+
+        ggtitle("Sepal Analysis")+
+        theme(plot.title = element_text(size=15))
       })
 
   })
