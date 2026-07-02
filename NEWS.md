@@ -1,3 +1,5 @@
+# shinyGolem 1.0.1.9000
+
 # shinyGolem 1.0.0
 
 * Update content and delete dependencies {GGally}
