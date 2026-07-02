@@ -2,8 +2,11 @@ library(shinytest2)
 
 # File: tests/testthat/test-app-function.R
 test_that("{shinytest2} recording: first_test", {
-  # Don't run these tests on the CRAN build servers
+  # Snapshots (screenshots/values) are recorded against a specific OS + R
+  # version via platform_variant() and aren't reproducible on CI runners
+  # (different R patch versions, fonts, headless browser rendering).
   skip_on_cran()
+  skip_on_ci()
 
   shiny_app <- run_app()
   app <- AppDriver$new(shiny_app,

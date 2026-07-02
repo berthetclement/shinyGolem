@@ -2,6 +2,12 @@ library(shinytest2)
 
 # skip()
 test_that("{shinytest2} recording: species_values", {
+  # Snapshots (screenshots/values) are recorded against a specific OS + R
+  # version via platform_variant() and aren't reproducible on CI runners
+  # (different R patch versions, fonts, headless browser rendering).
+  skip_on_cran()
+  skip_on_ci()
+
   shiny_app <- run_app()
 
   app <- AppDriver$new(app_dir = shiny_app,
