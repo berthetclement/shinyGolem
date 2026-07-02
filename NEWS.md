@@ -1,3 +1,11 @@
+# shinyGolem 1.0.1.9000
+
+* Add 'CLAUDE.md'
+* Fix test `golem-utils` due to breakinkg changes with `shiny` package from version `1.12.0`:
+  - "The return value of actionButton() and actionLink() now wraps label"
+* Fix snapshot issues :
+  - `testthat::snapshot_review()` and accept cause no real difference =>  `testthat::snapshot_accept()` to accept all changes...
+
 # shinyGolem 1.0.0
 
 * Update content and delete dependencies {GGally}
