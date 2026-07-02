@@ -1,6 +1,6 @@
 Package: shinyGolem
 Title: Demo APP
-Version: 1.0.0
+Version: 1.0.1.9000
 Authors@R: 
     person("Clement", "Berthet", email = "clement.berthet013@gmail.com", role = c("aut", "cre"))
 Description: The goal is to try {golem} and have a robust Shiny application, with tests and a ci/cd that deploys the application.
